@@ -7,15 +7,19 @@ var out = ;
 var numbers = [];
 var primes = [];
 
-(function(){
-  for(var i = 0; i <= 100; i++){
-    numbers[i] = i;
+function generateNumbers() {
+  for(var i = 0; i < 99; i++) {
+    numbers[i] = i + 2;
   }
-  numbers.shift();
+  console.log(numbers);
   return numbers;
-})();
+}
 
-function sieve(){  
+function sieve(){
+  for (var i = 0; i <= numbers.length; i++) {
+    //
+  }
+  }
   for (var i = numbers.indexOf(2) + 2; i <= numbers.length; i += 2) {
     numbers[i] = null;
   }
@@ -44,5 +48,4 @@ function primeNumbers(){
 }
 sieve();
 primeNumbers();
-console.log(primes);
 
