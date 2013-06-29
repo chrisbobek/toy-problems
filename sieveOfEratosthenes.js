@@ -16,8 +16,16 @@ function generateNumbers() {
   return numbers;
 }
 
-function sieve(){
-  for (var i = 0; i < numbers.length; i++) {
+function lowerPrime(n) {
+  var squareRoot = Math.sqrt(n);
+  var upperBound = Math.round(squareRoot);
+  return upperBound;
+}
+
+function sieve(n){
+  var lowerPrime = lowerPrime(n);
+
+  for (var i = 0; i < lowerPrime; i++) {
     var p = numbers[i];
   };
   for (var i = numbers.indexOf(2) + 2; i <= numbers.length; i += 2) {
