@@ -1,6 +1,9 @@
 #!/usr/bin/env node
 var fs = require('fs');
 
+var outfile = "primes.txt";
+var out = ;
+
 var numbers = [];
 var primes = [];
 
