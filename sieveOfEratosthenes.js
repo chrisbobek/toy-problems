@@ -17,6 +17,9 @@ function generateNumbers() {
 }
 
 function sieve(){
+  for (var i = 0; i < numbers.length; i++) {
+    var p = numbers[i];
+  };
   for (var i = numbers.indexOf(2) + 2; i <= numbers.length; i += 2) {
     numbers[i] = null;
   }
