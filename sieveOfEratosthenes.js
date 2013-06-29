@@ -16,15 +16,10 @@ function generateNumbers() {
   return numbers;
 }
 
-function lowerPrime(n) {
-  var squareRoot = Math.round(Math.sqrt(n));
-  return squareRoot;
-}
-
 function sieve(n){
-  var lowerPrime = lowerPrime(n);
+  var lowerPrimeBound = lowerPrimeBound(n);
 
-  for (var i = 0; i < lowerPrime; i++) {
+  for (var i = 0; i < lowerPrimeBound; i++) {
     var p = numbers[i];
   };
   for (var i = numbers.indexOf(2) + 2; i <= numbers.length; i += 2) {
