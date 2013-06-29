@@ -7,7 +7,7 @@ var outfile = "primes.txt";
 var numbers = [];
 var primes = [];
 
-// Create a list of integers from 2 to 100
+// Creates a list of integers from 2 to 100
 function generateNumbers() {
   for(var i = 0; i < 99; i++) {
     numbers[i] = i + 2;
@@ -29,6 +29,7 @@ function sieve(intgerArray, n){
   }
 }
 
+// Inserts remaining integers from numbers array into primes array
 function primeNumbers(intgerArray){
   for(var i = 0; i <= intgerArray.length; i++){
     if(intgerArray[i]){
