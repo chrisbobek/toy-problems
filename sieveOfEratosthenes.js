@@ -17,14 +17,15 @@ function generateNumbers() {
 }
 
 function sieve(n){
-  var lowerPrimeBound = lowerPrimeBound(n);
-
-  for (var i = 0; i < lowerPrimeBound; i++) {
+  for (var i = 0; i < numbers.length - 1; i++) {
     var p = numbers[i];
-  };
-  for (var i = numbers.indexOf(2) + 2; i <= numbers.length; i += 2) {
-    numbers[i] = null;
+    if (p) {
+      for (var j = numbers.indexOf(p) + p; j <= numbers.length; j += p) {
+        numbers[j] = null;
+      }
+    }
   }
+}
   for (var i = numbers.indexOf(3) + 3; i <= numbers.length; i += 3) {
     numbers[i] = null;
   }
