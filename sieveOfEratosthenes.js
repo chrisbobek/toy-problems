@@ -26,19 +26,6 @@ function sieve(n){
     }
   }
 }
-  for (var i = numbers.indexOf(3) + 3; i <= numbers.length; i += 3) {
-    numbers[i] = null;
-  }
-  for (var i = numbers.indexOf(5) + 5; i <= numbers.length; i += 5) {
-    numbers[i] = null;
-  }
-  for (var i = numbers.indexOf(7) + 7; i <= numbers.length; i += 7) {
-    numbers[i] = null;
-  }
-  for (var i = numbers.indexOf(11) + 11; i <= numbers.length; i += 11) {
-    numbers[i] = null;
-  }
-}
 
 function primeNumbers(){
   numbers.shift();
