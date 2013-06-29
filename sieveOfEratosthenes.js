@@ -2,7 +2,7 @@
 var fs = require('fs');
 
 var outfile = "primes.txt";
-var out = ;
+// var out = ;
 
 var numbers = [];
 var primes = [];
@@ -16,26 +16,29 @@ function generateNumbers() {
   return numbers;
 }
 
-function sieve(n){
-  for (var i = 0; i < numbers.length - 1; i++) {
-    var p = numbers[i];
+// Applies algorithm based on the Sieve of Eratosthenes
+//   to mark non-prime integers in the numbers array
+function sieve(intgerArray, n){
+  for (var i = 0; i < intgerArray.length; i++) {
+    var p = intgerArray[i];
     if (p && (p * p < n)) {
-      for (var j = numbers.indexOf(p) + p; j <= numbers.length; j += p) {
-        numbers[j] = null;
+      for (var j = intgerArray.indexOf(p) + p; j <= intgerArray.length; j += p) {
+        intgerArray[j] = null;
       }
     }
   }
 }
 
-function primeNumbers(){
-  numbers.shift();
-  for(var i = 0; i <= numbers.length; i++){
-    if(numbers[i]){
-      primes.push(numbers[i]);
+function primeNumbers(intgerArray){
+  for(var i = 0; i <= intgerArray.length; i++){
+    if(intgerArray[i]){
+      primes.push(intgerArray[i]);
     }
   }
   return primes;
 }
-sieve();
-primeNumbers();
+
+generateNumbers();
+sieve(numbers, numbers.length);
+primeNumbers(numbers);
 
