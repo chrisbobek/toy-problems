@@ -17,9 +17,8 @@ function generateNumbers() {
 }
 
 function lowerPrime(n) {
-  var squareRoot = Math.sqrt(n);
-  var upperBound = Math.round(squareRoot);
-  return upperBound;
+  var squareRoot = Math.round(Math.sqrt(n));
+  return squareRoot;
 }
 
 function sieve(n){
