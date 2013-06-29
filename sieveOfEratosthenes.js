@@ -19,7 +19,7 @@ function generateNumbers() {
 function sieve(n){
   for (var i = 0; i < numbers.length - 1; i++) {
     var p = numbers[i];
-    if (p) {
+    if (p && (p * p < n)) {
       for (var j = numbers.indexOf(p) + p; j <= numbers.length; j += p) {
         numbers[j] = null;
       }
