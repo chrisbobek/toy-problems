@@ -35,10 +35,8 @@ function primeNumbers(integerArray) {
       primes.push(integerArray[i]);
     }
   }
-  console.log("(Before) primes.length = " + primes.length);
   if (primes.length > 100)
     primes.length = 100;
-  console.log("(After) primes.length = " + primes.length);
   return primes;
 }
 
