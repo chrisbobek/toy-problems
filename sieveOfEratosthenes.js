@@ -6,6 +6,7 @@ var outfile = "primes.txt";
 
 var numbers = [];
 var primes = [];
+var primeNumbersString;
 
 // Creates a list of integers from 2 to 100
 function generateNumbers() {
@@ -27,19 +28,29 @@ function sieve(intgerArray, n){
       }
     }
   }
+  numbers = intgerArray;
+  return numbers;
 }
 
 // Inserts remaining integers from numbers array into primes array
-function primeNumbers(intgerArray){
+function primeNumbers(intgerArray) {
   for(var i = 0; i <= intgerArray.length; i++){
     if(intgerArray[i]){
       primes.push(intgerArray[i]);
     }
   }
+  console.log(primes);
   return primes;
+}
+
+// Generates a comma-separated string of prime numbers
+function stringify(primeNumbersArray) {
+  primeNumbersString = primeNumbersArray.join(",");
+  return primeNumbersString;
 }
 
 generateNumbers();
 sieve(numbers, numbers.length);
 primeNumbers(numbers);
+stringify(primes);
 
