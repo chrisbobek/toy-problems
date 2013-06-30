@@ -10,8 +10,6 @@ function generateNumbers() {
   for(var i = 0; i < 529; i++) {
     numbers[i] = i + 2;
   }
-  console.log(numbers);
-  console.log("numbers.length = " + numbers.length);
   return numbers;
 }
 
