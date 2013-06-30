@@ -25,7 +25,7 @@ function sieve(intgerArray, n){
     }
   }
   numbers = intgerArray;
-  // return numbers;
+  return numbers;
 }
 
 // Inserts remaining integers from numbers array into primes array
@@ -46,7 +46,6 @@ function stringify(primeNumbersArray) {
 
 generateNumbers();
 sieve(numbers, numbers.length);
-primeNumbers(numbers);
 
 var outfile = "primes.txt";
 var out = stringify(primeNumbers(numbers));
