@@ -40,7 +40,7 @@ function primeNumbers(intgerArray) {
 
 // Generates a comma-separated string of prime numbers
 function stringify(primeNumbersArray) {
-  primeNumbersString = primeNumbersArray.join(", ");
+  primeNumbersString = primeNumbersArray.join(",");
   return primeNumbersString;
 }
 
