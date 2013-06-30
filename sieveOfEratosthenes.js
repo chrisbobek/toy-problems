@@ -5,11 +5,13 @@ var numbers = [];
 var primes = [];
 var primeNumbersString;
 
-// Creates a list of integers from 2 to 100
+// Creates a list of integers from 2 to 530
 function generateNumbers() {
-  for(var i = 0; i < 99; i++) {
+  for(var i = 0; i < 529; i++) {
     numbers[i] = i + 2;
   }
+  console.log(numbers);
+  console.log("numbers.length = " + numbers.length);
   return numbers;
 }
 
@@ -35,6 +37,10 @@ function primeNumbers(integerArray) {
       primes.push(integerArray[i]);
     }
   }
+  console.log("(Before) primes.length = " + primes.length);
+  if (primes.length > 100)
+    primes.length = 100;
+  console.log("(After) primes.length = " + primes.length);
   return primes;
 }
 
