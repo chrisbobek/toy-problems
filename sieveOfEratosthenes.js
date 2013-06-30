@@ -1,9 +1,6 @@
 #!/usr/bin/env node
 var fs = require('fs');
 
-var outfile = "primes.txt";
-// var out = ;
-
 var numbers = [];
 var primes = [];
 var primeNumbersString;
@@ -13,7 +10,6 @@ function generateNumbers() {
   for(var i = 0; i < 99; i++) {
     numbers[i] = i + 2;
   }
-  console.log(numbers);
   return numbers;
 }
 
@@ -29,7 +25,7 @@ function sieve(intgerArray, n){
     }
   }
   numbers = intgerArray;
-  return numbers;
+  // return numbers;
 }
 
 // Inserts remaining integers from numbers array into primes array
@@ -39,7 +35,6 @@ function primeNumbers(intgerArray) {
       primes.push(intgerArray[i]);
     }
   }
-  console.log(primes);
   return primes;
 }
 
@@ -52,5 +47,9 @@ function stringify(primeNumbersArray) {
 generateNumbers();
 sieve(numbers, numbers.length);
 primeNumbers(numbers);
-stringify(primes);
 
+var outfile = "primes.txt";
+var out = stringify(primeNumbers(numbers));
+
+fs.writeFileSync(outfile, out);
+console.log("Script: " + __filename + "\nWrote: " + out + "\nTo: " + outfile);
