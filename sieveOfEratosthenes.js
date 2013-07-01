@@ -5,9 +5,9 @@ var numbers = [];
 var primes = [];
 var primeNumbersString;
 
-// Creates a list of integers from 2 to 530
+// Creates a list of integers from 2 to 600
 function generateNumbers() {
-  for(var i = 0; i < 529; i++) {
+  for(var i = 0; i < 599; i++) {
     numbers[i] = i + 2;
   }
   return numbers;
